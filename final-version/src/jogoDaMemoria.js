@@ -9,7 +9,11 @@ class jogoDaMemoria{
             {img: './arquivos/batman.png', nome: 'batman'},
             {img: './arquivos/deadpool.png', nome: 'deadpool'},
             {img: './arquivos/coringa.png', nome: 'coringa'},
-            {img: './arquivos/thor.png', nome: 'thor'}
+            {img: './arquivos/thor.png', nome: 'thor'},
+            {img: './arquivos/magneto.png', nome: 'magneto'},
+            {img: './arquivos/skull.png', nome: 'skull'},
+            {img: './arquivos/vader.png', nome: 'vader'},
+            {img: './arquivos/thanos.png', nome: 'thanos'}
         ]
 
         this.iconePadrao = './arquivos/ninja.png'
@@ -51,8 +55,9 @@ class jogoDaMemoria{
 
         const idDoIntervalo = this.tela.iniciarContador()
 
-        // vamos esperar 1 segundo para atualizar a tela
+        // vamos esperar 3 segundo para atualizar a tela
         await this.util.timeout(3000)
+        this.tela.limparContador(idDoIntervalo)
         this.esconderHerois(copias)
         this.tela.exibirContador(false)
     }
